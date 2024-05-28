@@ -1,24 +1,29 @@
-# README
+# PedrOC20/bounce-bck
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails app. To start you need to run a database setup and do some imports.
 
-Things you may want to cover:
+### Dependencies Required
 
-* Ruby version
+```
+postgresql
+rails v7.0.8.1
+```
 
-* System dependencies
 
-* Configuration
+### First Time Setup Instructions
 
-* Database creation
+```
+bundle install
+rails db:create
+rails db:migrate
+```
 
-* Database initialization
+### Starting Server
+1. Run the development server with:
 
-* How to run the test suite
+```bash
+$ rails s -p 3001
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+API will be available at `http://localhost:3001/api/...` 
+Example: `GET http://localhost:3001/api/stores` to get the stores available
