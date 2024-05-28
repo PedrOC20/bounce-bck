@@ -16,6 +16,7 @@ rails v7.0.8.1
 bundle install
 rails db:create
 rails db:migrate
+rails db:seed
 ```
 
 ### Starting Server
