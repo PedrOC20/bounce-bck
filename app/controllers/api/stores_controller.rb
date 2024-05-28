@@ -4,7 +4,7 @@ class Api::StoresController < ApplicationController
 
     render json: {
       status: {code: 200, message: 'Stores List'},
-      data: stores
+      data: stores.map { |store| StoreSerializer.new(store).serializable_hash[:data][:attributes] }
     }
   end
 
